@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import MyDate from './Components/Date/MyDate';
+import TaskForm from './Components/TaskForm/TaskForm';
 
 function App() {
 
@@ -23,27 +24,21 @@ function App() {
 
   return (
     <>
-      <div className="containerApp">
+       <div className="containerApp">
         <div className="headerForm">
           <MyDate />
-          <div className="form">
-            <button onClick={handleAdd}> 
-            <img src='.././btn-add.png' alt='add button' />
-            </button>
-            <input value={value} onChange={(e) => setValue(e.target.value)} placeholder='Create a new to do'/>
-          </div>          
+          <TaskForm value={value} handleAdd={handleAdd} setValue= {setValue}/>
         </div>
         <hr />
         {
           list.map((tarea) => {
             return (
               <li key={tarea}>
-                <input type='checkbox' />
+                <input type="checkbox" />
                 <span>{tarea}</span>
                 <button onClick={() => handleDelete(tarea)}>x</button>
-
               </li>
-            )
+            );
           })
         }
       </div>
