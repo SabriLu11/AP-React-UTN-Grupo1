@@ -11,7 +11,7 @@ const TaskList = ({ tarea, handleDelete, setValue }) => {
                 <button className='btn' onClick={handleDelete}>
                     <img src='.././radio.png' alt='add button' />
                 </button>
-
+        
                 <span className='task'>{tarea}</span>
 
                 <button className='btn' onClick={handleDelete}>
