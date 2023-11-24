@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import MyDate from './Components/Date/MyDate';
 import TaskForm from './Components/TaskForm/TaskForm';
-import TaskList from './Components/TaskList/TaskList';
+import TaskFrame from './Components/TaskForm/TaskFrame';
 
 function App() {
 
@@ -14,14 +14,11 @@ function App() {
     const handleAdd = () => {
         setList([...list, value])
         setValue("")
-        console.log(value)
-        console.log(list)
     }
 
     const handleDelete = (tarea) => {
         setList(list.filter(x => x !== tarea))
     }
-
 
     return (
         <>
@@ -31,17 +28,7 @@ function App() {
                     <TaskForm value={value} handleAdd={handleAdd} setValue={setValue} />
                 </div>
                 <hr />
-                {
-                    list.map((tarea, index) => (
-                        
-                        <TaskList
-                            key={index}
-                            tarea={tarea}
-                            handleDelete={() => handleDelete(tarea)}
-                        />
-                    ))
-                }
-
+                <TaskFrame list={list} handleDelete={handleDelete} setValue={setValue} />
             </div>
         </>
     );
