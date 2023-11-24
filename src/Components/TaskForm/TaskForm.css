@@ -34,3 +34,12 @@
   img{
     width: 50px;
   }
+
+
+  
+
+/* Theme - Dark /Ligth */
+.form.Dark{
+  background: var(--violetaClaro);
+  color:var(--violetaOscuro)
+}

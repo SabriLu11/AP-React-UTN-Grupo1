@@ -3,6 +3,7 @@
     --violetaMedio: #24273d;
     --violetaClaro : #9093C3;
     --VioletaGrisaceo: #686A8D;
+    --blanco: #ebebeb;
   }
 
 .date-container{
@@ -20,3 +21,18 @@ h1{
 h2{
     color: var(--VioletaGrisaceo);
 }
+
+
+/* Agrega estilos específicos para el tema Dark */
+
+  
+  /* Agrega estilos específicos para el tema Light */
+  
+  .form.Light {
+    background: white;
+    color: var(--violetaClaro);
+  }
+  
+
+
+

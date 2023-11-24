@@ -2,6 +2,7 @@
   --violetaOscuro : #171723;
   --violetaMedio: #24273d;
   --violetaClaro : #9093C3;
+  --blanco: #ebebeb;
 }
 
 /*---- Container general view ----*/
@@ -28,3 +29,27 @@
   align-items:center;
 }
 
+
+/* Switch */
+.react-switch {
+  vertical-align: middle;
+  margin-left: 4px;
+  margin: 10px;
+  float: inline-end;
+}
+
+/* Theme - Dark /Ligth */
+#Dark{
+  background: radial-gradient(79.55% 73.87% at 51.2% 50%, #9093C3 0%, #24273D 100%);
+  }
+
+
+
+#Light{
+  background: radial-gradient(79.55% 73.87% at 51.2% 50%, #24273D 0%,#9093C3  100%);
+  
+  }
+
+  #formLight{
+    background: var(--blanco);
+  }
