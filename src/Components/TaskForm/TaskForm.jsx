@@ -14,6 +14,6 @@ const TaskForm = ({ value, handleAdd, setValue }) => {
         <input className= {`form ${themeClass}`} value={value} onChange={(e) => setValue(e.target.value)} placeholder='Create a new to do'/>
     </div>    
     );
-  };
+};
 
-  export default TaskForm;
+export default TaskForm;

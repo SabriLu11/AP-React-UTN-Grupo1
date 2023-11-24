@@ -4,6 +4,8 @@ import MyDate from "./Components/Date/MyDate";
 import TaskForm from "./Components/TaskForm/TaskForm";
 import { useThemeContext } from "./context/ThemeContext";
 import ReactSwitch from "react-switch";
+import './App.css';
+import TaskFrame from './Components/TaskForm/TaskFrame';
 
 function App() {
   const [list, setList] = useState([]);
@@ -17,6 +19,7 @@ function App() {
     setContextTheme((state) => (state === "Light" ? "Dark" : "Light"));
     setChecked(nextChecked);
   };
+
 
   //funciones para manejar los botones
   const handleAdd = () => {
@@ -53,18 +56,11 @@ function App() {
           <TaskForm value={value} handleAdd={handleAdd} setValue={setValue} />
         </div>
         <hr />
-        {list.map((tarea) => {
-          return (
-            <li key={tarea}>
-              <input type="checkbox" />
-              <span>{tarea}</span>
-              <button onClick={() => handleDelete(tarea)}>x</button>
-            </li>
-          );
-        })}
+        <TaskFrame list={list} handleDelete={handleDelete} setValue={setValue} />
       </div>
     </>
   );
-}
 
+   
+}
 export default App;
