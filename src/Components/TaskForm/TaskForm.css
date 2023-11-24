@@ -1,36 +1,35 @@
-:root{
-    --violetaOscuro : #171723;
-    --violetaMedio: #24273d;
-    --violetaClaro : #9093C3;
-  }
+:root {
+  --violetaOscuro: #171723;
+  --violetaMedio: #24273d;
+  --violetaClaro: #9093C3;
+}
 
-  .form{
-    height: 87px;
-    width: 542px;
-    background-color: var(--violetaClaro);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-   
-  }
+.form {
+  height: 87px;
+  width: 542px;
+  background-color: var(--violetaClaro);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
 
-.form input{
-    background-color: var(--violetaClaro);
-    color: var(--violetaOscuro);
-    border: none;
-    font-weight: bolder;
-    font-size: 25px;
-    font-weight: 600;
-    letter-spacing: 0.25px;
-    outline: none;
-  }
-  
-  button{
-    border: none;
-    background: unset;
-    margin-left: 10px;
-  }
-  
-  img{
-    width: 50px;
-  }
+.form input {
+  background-color: var(--violetaClaro);
+  color: var(--violetaOscuro);
+  border: none;
+  font-weight: bolder;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  outline: none;
+}
+
+button {
+  border: none;
+  background: unset;
+  margin-left: 10px;
+}
+
+img {
+  width: 50px;
+}

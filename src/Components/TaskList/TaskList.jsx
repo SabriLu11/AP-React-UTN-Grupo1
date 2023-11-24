@@ -15,7 +15,7 @@ const TaskList = ({ tarea, handleDelete, setValue }) => {
                 <span className='task'>{tarea}</span>
 
                 <button className='btn' onClick={handleDelete}>
-                    <img src='.././bin.png.png' alt='add button'/>
+                    <img src='.././bin.png.png' alt='remove task' />
                 </button>
             </li>
         </div>

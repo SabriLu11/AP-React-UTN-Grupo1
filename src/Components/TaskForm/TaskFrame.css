@@ -1,0 +1,24 @@
+:root {
+  --violetaOscuro: #171723;
+  --violetaMedio: #24273d;
+  --violetaClaro: #9093C3;
+}
+
+.frame {
+  background-color: var(--violetaMedio);
+  border-radius: 10px;
+  align-items: center;
+}
+
+.taskSeparator {
+  padding-top: 1px;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: var(--violetaClaro);
+}
+
+.buttonsFrame{
+  background-color: var(--violetaMedio);
+  color: var(--violetaClaro);
+  text-align: center;
+}
