@@ -2,6 +2,7 @@
   --violetaOscuro: #171723;
   --violetaMedio: #24273d;
   --violetaClaro: #9093C3;
+  --VioletaGrisaceo: #686A8D;
 }
 
 .form {
@@ -13,6 +14,10 @@
   align-items: center;
 }
 
+input{
+  padding: 0;
+
+}
 .form input {
   background-color: var(--violetaClaro);
   color: var(--violetaOscuro);
@@ -30,6 +35,10 @@ button {
   margin-left: 10px;
 }
 
-img {
-  width: 50px;
+.iconAdd {
+  font-size: 50px;
+  color: #24273d;
 }
+
+
+

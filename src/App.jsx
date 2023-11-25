@@ -55,7 +55,7 @@ function App() {
           <MyDate />
           <TaskForm value={value} handleAdd={handleAdd} setValue={setValue} />
         </div>
-        <hr />
+        
         <TaskFrame list={list} handleDelete={handleDelete} setValue={setValue} />
       </div>
     </>
