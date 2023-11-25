@@ -1,15 +1,15 @@
 import { useState } from "react";
-import "./App.css";
+import { useThemeContext } from "./context/ThemeContext";
 import MyDate from "./Components/Date/MyDate";
 import TaskForm from "./Components/TaskForm/TaskForm";
-import { useThemeContext } from "./context/ThemeContext";
 import ReactSwitch from "react-switch";
-import './App.css';
-import TaskFrame from './Components/TaskForm/TaskFrame';
+import TaskFrame from './Components/TaskFrame/TaskFrame';
+import swal from 'sweetalert';
+import "./App.css";
 
 function App() {
   const [list, setList] = useState([]);
-  const [value, setValue] = useState();
+  const [value, setValue] = useState("");
 
   //manejo del estado del tema
   const { contextTheme, setContextTheme } = useThemeContext();
@@ -22,9 +22,20 @@ function App() {
 
 
   //funciones para manejar los botones
-  const handleAdd = () => {
-    setList([...list, value]);
-    setValue("");
+  const handleAdd = () => {    
+    if (value.trim() !== ""){
+      setList([...list, value]);
+      setValue("");
+    } else{
+      //alerta
+     swal({
+      title: "Tarea vacía",
+      text: "No es posible agregar una tarea vacía",
+      icon: "error",
+      button: "Ok!",
+      timer: 2500,
+     });
+    }
   };
 
   const handleDelete = (tarea) => {

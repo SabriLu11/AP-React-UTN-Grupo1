@@ -4,7 +4,7 @@ export const ThemeContext = createContext();
 
 export const ThemeContextProvider = ({ children }) => {
 
-  const [contextTheme, setContextTheme] = useState("Ligth");
+  const [contextTheme, setContextTheme] = useState("Dark");
 
   const values = { contextTheme, setContextTheme };
   return (

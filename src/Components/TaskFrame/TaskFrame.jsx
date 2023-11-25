@@ -23,7 +23,7 @@ const TaskFrame = ({ list, handleDelete, setValue }) => {
                     ))
                 }
 
-                <tr className='buttonsFrame'>
+                <tr className='buttonsFrame' id={`list${themeClass}`}>
                 
                     <span>botones</span>
                 </tr>

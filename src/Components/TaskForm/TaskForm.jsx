@@ -11,17 +11,19 @@ const TaskForm = ({ value, handleAdd, setValue }) => {
 
 
     //funcion para agregar con la tecla enter tmb
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      handleAdd();
-    }
-  };
+    const handleKeyDown = (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault(); //elimina salto de línea al apretar enter
+        handleAdd();
+      }
+    };
+
     return (
     <div className= 'form' id={`formImput${themeClass}`} >
         <button onClick={handleAdd}> 
-        <IoAddCircleOutline  className='iconAdd' id={`iconAdd${themeClass}`} onKeyDown={handleKeyDown}/>
+        <IoAddCircleOutline  className='iconAdd' id={`iconAdd${themeClass}`} />
         </button>
-        <input className= 'form' id={`formImput${themeClass}`}  value={value} onChange={(e) => setValue(e.target.value)} placeholder='Create a new to do'/>
+        <input className= 'form' id={`formImput${themeClass}`}  value={value} onChange={(e) => setValue(e.target.value)} placeholder='Create a new to do' onKeyDown={handleKeyDown}/>
     </div>    
     );
   };
