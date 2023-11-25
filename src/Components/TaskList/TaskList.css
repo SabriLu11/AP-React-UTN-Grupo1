@@ -1,40 +1,78 @@
-
+* {
+  box-sizing: border-box;
+}
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
-.listaTask {
-    width: 600px;
-    height: 90px; 
-    border-radius: 5px;
-    background: #24273D;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    background-color: #24273D ;
+.containerlistaTask {
+  margin: 10px;
+  width: 580px;
+  height: 90px;
+  border-radius: 5px;
+  background: #24273d;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #24273d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.listTask{
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 580px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
 
 }
-
 .task {
-    display: inline-block;
-    position: sticky;
-    color: #9093C3;
-    font-family: Rosario;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 0.5px;
-    width: 339px;
-    height: 35px;
-    top: -324px;
-    left: 600px;
-    padding-right: 25px;
+  color: #9093c3;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  height: 35px;
+  
+  padding-right: 25px;
 }
 
-img {
-    width: 25px;
+/* Estiliza el checkbox */
+.checkbox {
+  appearance: none; /* Oculta el estilo predeterminado del sistema operativo */
+  -webkit-appearance: none; /* Para navegadores basados en WebKit (como Chrome y Safari) */
+  -moz-appearance: none; /* Para navegadores basados en Gecko (como Firefox) */
+  outline: none; /* Elimina el contorno predeterminado al hacer clic */
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  cursor: pointer;
 }
 
+/* Pseudo-elemento para la esfera dentro del checkbox */
+.checkbox::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; /* Hace que el seudoelemento sea redondo */
+  background-color: var(--violetaOscuro);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  transition: all 1s;
+}
+
+/* Muestra la esfera cuando el checkbox está marcado */
+.checkbox:checked::before {
+  display: block;
+}

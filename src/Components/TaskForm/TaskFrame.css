@@ -5,12 +5,15 @@
 }
 
 .frame {
+  width: 600px;
   background-color: var(--violetaMedio);
   border-radius: 10px;
   align-items: center;
+  margin-top: 15px;
 }
 
 .taskSeparator {
+  
   padding-top: 1px;
   margin-left: 0;
   margin-right: 0;
@@ -22,3 +25,9 @@
   color: var(--violetaClaro);
   text-align: center;
 }
+
+
+
+  
+ 
+
