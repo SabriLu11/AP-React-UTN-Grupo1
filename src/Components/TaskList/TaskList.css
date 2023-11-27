@@ -5,7 +5,10 @@
 li {
   list-style: none;
 }
-
+.containerList-Buttons{
+  display: flex;
+  flex-direction: column;
+}
 .containerlistaTask {
   margin: 10px;
   width: 580px;

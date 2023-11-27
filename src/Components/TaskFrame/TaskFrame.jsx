@@ -3,6 +3,8 @@ import TaskList from '../TaskList/TaskList'
 import { useThemeContext } from '../../context/ThemeContext';
 import { useState } from "react";
 import { useEffect } from "react";
+import { ContainerButtons } from "../Buttons/ContainerButtons";
+
 
 const TaskFrame = ({ list, handleDelete, setValue }) => {
     
@@ -14,6 +16,7 @@ const TaskFrame = ({ list, handleDelete, setValue }) => {
           setNoTask('Aún no hay tareas para hoy!');
         } else {
           setNoTask('');
+          
         }
       }, [list]);
 
@@ -28,8 +31,9 @@ const TaskFrame = ({ list, handleDelete, setValue }) => {
                     noTask ? (
                         <div className="notask">
                             <p>{noTask}</p>
+                            
                         </div>
-                        
+                    
                       ):(
                         list.map((tarea, index) => (
                             <tr>
@@ -41,14 +45,17 @@ const TaskFrame = ({ list, handleDelete, setValue }) => {
                                 />
                                 <div className="taskSeparator" />
                             </tr>
+                            
                             ))
+                        
                         )
                 }
 
                 <tr className='buttonsFrame' id={`list${themeClass}`}>
                 
-                    <span>botones</span>
+                    
                 </tr>
+                {list.length > 0 && <ContainerButtons list={list} />}
             </table>
         </>
     );

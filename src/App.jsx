@@ -3,9 +3,10 @@ import { useThemeContext } from "./context/ThemeContext";
 import MyDate from "./Components/Date/MyDate";
 import TaskForm from "./Components/TaskForm/TaskForm";
 import ReactSwitch from "react-switch";
-import TaskFrame from './Components/TaskFrame/TaskFrame';
+
 import swal from 'sweetalert';
 import "./App.css";
+import TaskFrame from "./Components/TaskFrame/TaskFrame";
 
 function App() {
   const [list, setList] = useState([]);

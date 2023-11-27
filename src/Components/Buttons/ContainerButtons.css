@@ -1,0 +1,22 @@
+:root {
+    --violetaOscuro: #171723;
+    --violetaMedio: #24273d;
+    --violetaClaro: #9093c3;
+    --blanco: #ebebeb;
+    --VioletaGrisaceo: #686a8d;
+    --gris: rgb(194, 192, 192);
+  }
+
+.container-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list-length{
+    font-size: 15px;
+    font-weight: bolder;
+
+    color: var(--blanco)
+
+}
