@@ -19,7 +19,7 @@ const TaskForm = ({ value, handleAdd, setValue }) => {
     };
 
     return (
-    <div className= 'form' id={`formImput${themeClass}`} >
+    <div className= 'form' id= {`formImput${themeClass}`} >
         <button onClick={handleAdd}> 
         <IoAddCircleOutline  className='iconAdd' id={`iconAdd${themeClass}`} />
         </button>
