@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Propósito del proyecto
 
-    El proyecto tiene como fin integrar los conocimientos teóricos y prácticos adquiridos durante el desarrollo del curso Argentina Programa - Reack js, junto a la Universidad Tecnológica Nacional (UTN), y favorecer el trabajo en equipo.
+    El proyecto tiene como fin integrar los conocimientos teóricos y prácticos adquiridos durante el desarrollo del curso Argentina Programa - React js, junto a la Universidad Tecnológica Nacional (UTN), y favorecer el trabajo en equipo.
 
  ### Herramientas a instalar
     

@@ -11,12 +11,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 90px;
 }
 
 .list-length{
     font-size: 15px;
     font-weight: bolder;
-
     color: var(--blanco)
-
 }

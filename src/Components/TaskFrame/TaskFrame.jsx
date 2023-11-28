@@ -4,12 +4,12 @@ import { useThemeContext } from "../../context/ThemeContext";
 import { useState } from "react";
 import { useEffect } from "react";
 import { ContainerButtons } from "../Buttons/ContainerButtons";
+import Swal from 'sweetalert2';
 
 const TaskFrame = ({ list, setList, handleDelete, setValue }) => {
   //Si la lista de tareas está vacía
   const [noTask, setNoTask] = useState("");
   const [selectAll, setSelectAll] = useState(false);
-  const [deleteAll, setDeleteAll] = useState(false);
 
   useEffect(() => {
     if (list.length === 0) {
@@ -25,7 +25,27 @@ const TaskFrame = ({ list, setList, handleDelete, setValue }) => {
   };
 
   const handleDeleteAll=()=>{
-    setList([]);
+    Swal.fire({
+      title: "¿Estás seguro?",
+      text: "Vas a eliminar todas las tareas y no podrás recuperarlas",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#77CA42",
+      cancelButtonColor: "#DF4631",
+      cancelButtonText: "Cancelar",
+      confirmButtonText: "Si, eliminar todas"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setList([]);
+        Swal.fire({
+          title: "¡Día libre!",
+          text: "Se eliminaron todas las tareas correctamente",
+          icon: "success"
+        });
+        
+      }
+    });
+  
   }
 
   //manejo del tema
