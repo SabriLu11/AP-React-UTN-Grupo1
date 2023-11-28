@@ -1,4 +1,5 @@
 import { useThemeContext } from "../../context/ThemeContext";
+import { useState } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import "./TaskList.css";
 import React from "react";
@@ -9,16 +10,25 @@ const TaskList = ({ tarea, handleDelete, setValue }) => {
 
   const themeClass = contextTheme === "Dark" ? "Dark" : "Light";
 
+  //para tachar el texto de la task completada
+  const [isChecked, setIsChecked] = useState(false);
+
   return (
   
       <div className="containerlistaTask " id={`formImput${themeClass}`}>
         <li>
           <div className="listTask">
             <button className="btn">
-              <input type="checkbox" className="checkbox" />
+              <input type="checkbox" 
+                className="checkbox" 
+                checked={isChecked}
+                onChange={() => setIsChecked(!isChecked)} />
             </button>
 
-            <span className="task" id={`span${themeClass}`}>
+            <span className="task" id={`span${themeClass}`} 
+                //ternario para agregar la linea que tacha si isChecked es true
+                style={{textDecoration: isChecked ? 'line-through' : 'none'}}
+            >
               {tarea}
             </span>
 

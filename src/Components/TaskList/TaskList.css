@@ -79,3 +79,7 @@ li {
 .checkbox:checked::before {
   display: block;
 }
+
+.checkbox:checked + .task {
+  text-decoration: line-through;
+}
