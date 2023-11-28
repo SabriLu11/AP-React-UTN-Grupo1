@@ -6,7 +6,7 @@ import "./TaskList.css";
 const TaskList = ({
   tarea,
   handleDelete,
- 
+
   selectAll,
 }) => {
   //manejo del tema
@@ -19,7 +19,6 @@ const TaskList = ({
   useEffect(() => {
     setIsChecked(selectAll);
   }, [selectAll]);
-
 
   return (
     <div className="containerlistaTask " id={`formImput${themeClass}`}>

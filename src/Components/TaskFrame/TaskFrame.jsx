@@ -35,9 +35,8 @@ const TaskFrame = ({ list, handleDelete, setValue }) => {
           </div>
         ) : (
           list.map((tarea, index) => (
-            <tr>
+            <tr key={index}>
               <TaskList
-                key={index}
                 tarea={tarea}
                 handleDelete={() => handleDelete(tarea)}
                 setValue={setValue}
