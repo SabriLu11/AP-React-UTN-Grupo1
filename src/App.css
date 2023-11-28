@@ -100,3 +100,7 @@
 #title{
   color: var(--blanco);
 }
+
+#spanNumeroLight{
+  color: var(--VioletaGrisaceo);
+}
