@@ -5,10 +5,11 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { ContainerButtons } from "../Buttons/ContainerButtons";
 
-const TaskFrame = ({ list, handleDelete, setValue }) => {
+const TaskFrame = ({ list, setList, handleDelete, setValue }) => {
   //Si la lista de tareas está vacía
   const [noTask, setNoTask] = useState("");
   const [selectAll, setSelectAll] = useState(false);
+  const [deleteAll, setDeleteAll] = useState(false);
 
   useEffect(() => {
     if (list.length === 0) {
@@ -22,6 +23,10 @@ const TaskFrame = ({ list, handleDelete, setValue }) => {
   const handleSelectAll = () => {
     setSelectAll(!selectAll);
   };
+
+  const handleDeleteAll=()=>{
+    setList([]);
+  }
 
   //manejo del tema
   const { contextTheme } = useThemeContext();
@@ -52,6 +57,7 @@ const TaskFrame = ({ list, handleDelete, setValue }) => {
           <ContainerButtons
             list={list}
             onSelectAll={handleSelectAll}
+            onDeleteAll={handleDeleteAll}
             selectAll={selectAll}
           />
         )}

@@ -4,7 +4,7 @@ import { ButtonSelect } from './ButtonSelect/ButtonSelect'
 import { ButtonDelete } from './ButtonDelete/ButtonDelete'
 import { useThemeContext } from '../../context/ThemeContext'
 
-export const ContainerButtons = ({ list, onSelectAll }) => {
+export const ContainerButtons = ({ list, onSelectAll, onDeleteAll }) => {
   const { contextTheme } = useThemeContext();
 
   const themeClass = contextTheme === "Dark" ? "Dark" : "Light";
@@ -14,7 +14,7 @@ export const ContainerButtons = ({ list, onSelectAll }) => {
       <span className='list-length' id={`spanNumero${themeClass}`}>Tenés {list.length} {list.length > 1 ? 'tareas' : 'tarea'}</span>
 
         <ButtonSelect onSelectAll={onSelectAll}/>
-        <ButtonDelete />
+        <ButtonDelete onDeleteAll={onDeleteAll}/>
     </div>
   )
 }

@@ -69,10 +69,10 @@ function App() {
 
         <div className="headerForm" id={`form${contextTheme}`}>
           <MyDate />
-          <TaskForm value={value} handleAdd={handleAdd} setValue={setValue} />
+          <TaskForm value={value} handleAdd={handleAdd} setValue={setValue}/>
         </div>
         
-        <TaskFrame list={list} handleDelete={handleDelete} setValue={setValue} />
+        <TaskFrame list={list} handleDelete={handleDelete} setValue={setValue} setList={setList}  />
       </div>
     </>
   );
