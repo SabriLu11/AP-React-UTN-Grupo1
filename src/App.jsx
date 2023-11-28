@@ -11,6 +11,7 @@ import TaskFrame from "./Components/TaskFrame/TaskFrame";
 function App() {
   const [list, setList] = useState([]);
   const [value, setValue] = useState("");
+  
 
   //manejo del estado del tema
   const { contextTheme, setContextTheme } = useThemeContext();
@@ -20,6 +21,7 @@ function App() {
     setContextTheme((state) => (state === "Light" ? "Dark" : "Light"));
     setChecked(nextChecked);
   };
+
 
 
   //funciones para manejar los botones
@@ -38,7 +40,7 @@ function App() {
      });
     }
   };
-
+// funcion para borrar una tarea
   const handleDelete = (tarea) => {
     setList(list.filter((x) => x !== tarea));
   };

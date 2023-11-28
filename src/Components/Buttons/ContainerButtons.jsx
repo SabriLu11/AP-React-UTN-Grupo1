@@ -3,12 +3,12 @@ import './ContainerButtons.css'
 import { ButtonSelect } from './ButtonSelect/ButtonSelect'
 import { ButtonDelete } from './ButtonDelete/ButtonDelete'
 
-export const ContainerButtons = ({ list }) => {
+export const ContainerButtons = ({ list, onSelectAll }) => {
   return (
     <div className='container-buttons'>
-      <span className='list-length'>Tenés {list.length}</span>
+      <span className='list-length'>Tenés {list.length} {list.length > 1 ? 'tareas' : 'tarea'}</span>
 
-        <ButtonSelect />
+        <ButtonSelect onSelectAll={onSelectAll}/>
         <ButtonDelete />
     </div>
   )

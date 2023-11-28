@@ -1,13 +1,14 @@
 import { useThemeContext } from "../../context/ThemeContext";
 
 import "./TaskList.css";
-import React from "react";
 
-const TaskList = ({ tarea, handleDelete, setValue }) => {
+
+const TaskList = ({ tarea, handleDelete, setValue, selected ,oneSelect, handleCheckboxChange }) => {
   //manejo del tema
   const { contextTheme } = useThemeContext();
-
+ 
   const themeClass = contextTheme === "Dark" ? "Dark" : "Light";
+  
 
   return (
   
@@ -15,7 +16,11 @@ const TaskList = ({ tarea, handleDelete, setValue }) => {
         <li>
           <div className="listTask">
             <button className="btn">
-              <input type="checkbox" className="checkbox" />
+              <input 
+              type="checkbox" 
+              className="checkbox" 
+              checked={selected || oneSelect} 
+              onChange={() => handleCheckboxChange(tarea)}/>
             </button>
 
             <span className="task" id={`span${themeClass}`}>
