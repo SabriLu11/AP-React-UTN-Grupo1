@@ -88,3 +88,15 @@
 #spanDark {
   color: var(--violetaOscuro);
 }
+
+#iconTrashDark{
+  color: var(--violetaOscuro);
+}
+
+#iconTrashLight{
+  color: var(--VioletaGrisaceo);
+}
+
+#title{
+  color: var(--violetaMedio);
+}

@@ -1,5 +1,5 @@
 import { useThemeContext } from "../../context/ThemeContext";
-
+import { FaTrashAlt } from "react-icons/fa";
 import "./TaskList.css";
 import React from "react";
 
@@ -23,7 +23,7 @@ const TaskList = ({ tarea, handleDelete, setValue }) => {
             </span>
 
             <button className="btn" onClick={handleDelete}>
-              <img src=".././bin.png.png" alt="remove task" />
+                <FaTrashAlt size={20} className='iconTrash' id={`iconTrash${themeClass}`}/>
             </button>
           </div>
         </li>
