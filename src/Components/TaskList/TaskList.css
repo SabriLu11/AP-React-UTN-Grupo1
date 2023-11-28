@@ -83,3 +83,13 @@ li {
 .checkbox:checked + .task {
   text-decoration: line-through;
 }
+
+.iconTrash{
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.iconTrash:hover{
+  color: rgb(163, 5, 5) !important;
+  transform: scale(1.2);
+} 
