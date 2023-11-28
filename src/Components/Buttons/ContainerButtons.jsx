@@ -6,7 +6,7 @@ import { ButtonDelete } from './ButtonDelete/ButtonDelete'
 export const ContainerButtons = ({ list }) => {
   return (
     <div className='container-buttons'>
-      <span className='list-length'>Tenés {list.length}</span>
+      <span className='list-length'>Tenés {list.length} tareas </span>
 
         <ButtonSelect />
         <ButtonDelete />
